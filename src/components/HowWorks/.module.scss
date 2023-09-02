@@ -1,0 +1,109 @@
+@import "../../styles/variables.scss";
+
+.section {
+  background-image: url("../../assets/woks.png");
+  .section__content {
+    position: relative;
+    z-index: 10;
+  }
+  .works__box {
+    margin-top: 34px;
+    margin-left: auto;
+    width: 725px;
+    max-width: 90%;
+    border-radius: 20px;
+    background-color: $pure__white;
+    padding: 36px 29px;
+    .list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 70px;
+      margin-bottom: 20px;
+      .single__li {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+        > span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+      }
+    }
+    .btn {
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
+}
+@media (max-width: 1399px) {
+  .section {
+    .works__box {
+      padding: 30px 22px;
+      width: 580px;
+      .list {
+        row-gap: 40px;
+        .single__li {
+          gap: 18px;
+          > span {
+            height: 60px;
+            width: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .section {
+    .works__box {
+      padding: 26px 18px;
+      width: 520px;
+      .list {
+        row-gap: 32px;
+        .single__li {
+          gap: 12px;
+          > span {
+            height: 50px;
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .section {
+    .works__box {
+      width: 100%;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .section {
+    .works__box {
+      max-width: 100%;
+      border-radius: 10px;
+      .list {
+        row-gap: 20px;
+        .single__li {
+          flex-direction: column;
+          gap: 6px;
+          text-align: center;
+          &:not(:last-child) {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+          }
+        }
+      }
+      .btn {
+        margin: 40px auto 0;
+        width: 100%;
+      }
+    }
+  }
+}

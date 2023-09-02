@@ -1,0 +1,137 @@
+@import "../../styles/variables.scss";
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 80px;
+  gap: 50px;
+  height: calc(100% - 150px);
+  max-height: 567px;
+  &.slide__,
+  &.slide__5 {
+    gap: 8px;
+  }
+  .image__content,
+  .text__content {
+    flex: 1;
+  }
+  .text__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    flex: 1;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 10px 0;
+    .hero__title {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .title {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #d9d9d983;
+    }
+    .subtitle {
+      font-size: $ft__25;
+      font-weight: $ft__w__bold;
+      line-height: 38px;
+      span {
+        color: $strong__red;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .image__content {
+    height: 100%;
+    max-width: 900px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: right;
+    }
+  }
+}
+@media (max-width: 1399px) {
+  .slide {
+    padding: 0 60px;
+
+    .text__content {
+      .subtitle {
+        font-size: $ft__20;
+        line-height: 32px;
+      }
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .slide {
+    .image__content,
+    .text__content {
+      flex: none;
+    }
+    .text__content {
+      flex: 1;
+      .title {
+        padding-bottom: 10px;
+      }
+      .subtitle {
+        font-size: $ft__16;
+        line-height: 30px;
+        &:not(:last-of-type) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    .image__content {
+      height: 100%;
+      max-width: 320px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .slide {
+    padding: 0 20px;
+    .image__content,
+    .text__content {
+      flex: none;
+    }
+    .text__content {
+      flex: 1;
+      .title {
+        padding-bottom: 10px;
+      }
+      .subtitle {
+        font-size: 14px;
+        line-height: 28px;
+        max-width: 500px;
+        &:not(:last-of-type) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    .image__content {
+      height: 100%;
+      max-width: 320px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .slide {
+    max-height: none;
+    height: auto;
+    padding: 0px;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .image__content {
+      margin: 0 auto;
+    }
+  }
+}

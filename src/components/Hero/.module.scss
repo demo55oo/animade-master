@@ -1,0 +1,28 @@
+.hero__section {
+  max-height: 900px;
+  height: calc(100vh - 97px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1399px) {
+  .hero__section {
+    height: calc(100vh - 82px);
+  }
+}
+@media (max-width: 1199px) {
+  .hero__section {
+    max-height: 520px;
+  }
+}
+@media (max-width: 991px) {
+  .hero__section {
+    height: calc(100vh - 68px);
+  }
+}
+@media (max-width: 767px) {
+  .hero__section {
+    max-height: none;
+    height: auto;
+  }
+}

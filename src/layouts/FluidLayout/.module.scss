@@ -1,0 +1,31 @@
+.layout {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/contact.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 40px;
+    z-index: 10;
+    position: relative;
+    .back__btn {
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      padding: 4px 24px 4px 0;
+      border-right: 1px solid #fff;
+    }
+    .logo {
+      height: 40px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.button {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  border-radius: 100px;
+  border: 3px solid #fff;
+  background: linear-gradient(90deg, #091c56 100%, #c8d5ff 100%);
+  box-shadow: inset 7px 0px 11px 15px #ffffff18;
+  // box-sizing: border-box;
+  flex-shrink: 0;
+  opacity: 1;
+  &.active {
+    opacity: 0.4;
+    .bullet {
+      transform: translateX(-40px);
+    }
+  }
+  .bullet {
+    transition: 0.1s linear;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+@media (max-width: 1199px) {
+  .button {
+    border-width: 2px;
+    width: 60px;
+    height: 30px;
+    &.active {
+      opacity: 0.4;
+      .bullet {
+        transform: translateX(-30px);
+      }
+    }
+    .bullet {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
