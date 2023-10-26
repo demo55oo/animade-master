@@ -1,0 +1,33 @@
+.hero__section {
+  max-height: 900px;
+  background-image: url("../../assets/Group 4.png");
+  height: calc(120vh - 97px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover; /* Stretch the background image to cover the entire element */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-position: center center; /* Center the background image */
+}
+@media (max-width: 1399px) {
+  .hero__section {
+    height: calc(100vh - 82px);
+  }
+}
+@media (max-width: 1199px) {
+  .hero__section {
+    max-height: 520px;
+  }
+}
+@media (max-width: 991px) {
+  .hero__section {
+    height: calc(100vh - 68px);
+  }
+}
+@media (max-width: 767px) {
+  .hero__section {
+    max-height: none;
+    height: auto;
+  }
+}
+

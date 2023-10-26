@@ -1,0 +1,151 @@
+@import "../../styles/variables.scss";
+
+.textarea,
+.input {
+  width: 496px;
+  height: 94px;
+  border-radius: 8px;
+  // border: 1px solid #7D8992;
+  background: #353B40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  padding-left: 5px;
+  
+}
+
+.textarea input,
+.input input {
+  height: 100%;
+  width: 100%;
+  font-size: 19px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #353B40;
+  border-radius: 8px;
+
+}
+
+.textarea.error,
+.input.error {
+  margin-bottom: 10px;
+
+}
+
+.textarea .error__message,
+.input .error__message {
+  // position: absolute;
+  bottom: -21px;
+  font-size: 13px;
+  text-align: center;
+  left: 10px;
+  color: #ff8c8c;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-block-end: auto;
+
+}
+
+.textarea .error__input,
+.input .error__input {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 10px;
+  background: #ffcccc;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #c70025;
+  transform: translateY(-100%);
+  border-radius: 4px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-block-end: auto;
+
+}
+
+.textarea .error__input::after,
+.input .error__input::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 0;
+  height: 0;
+  transform: translateY(100%);
+  border: 8px solid transparent;
+  border-top-color: #ffcccc;
+}
+
+.textarea .show__pass,
+.input .show__pass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.textarea {
+  min-height: 300px;
+  width: auto;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media (max-width: 1399px) {
+  .input input {
+    font-size: 18px;
+  }
+  .textarea {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .input input {
+    font-size: 16px;
+  }
+  .textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .textarea,
+  .input {
+    border-radius: 10px;
+    height: 54px;
+    width: auto;
+
+  }
+}
+.custom{
+  width: 496px;
+  height: 94px;
+  border-radius: 8px;
+  // border: 1px solid #7D8992;
+  background: #353B40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}.co{
+  margin-top: 10px;
+  margin-bottom: -10px;
+  width: 85px;
+  height: 38px;
+  border-radius: 8px;
+// border: 1px solid #7D8992;
+background: #353B40;
+padding-left: 10px; /* Add left padding to the text inside .co */
+width: fit-content; /* Set the width based on the content */
+justify-content: flex-start; /* Align text to the left */
+padding-right: 10px;
+
+}

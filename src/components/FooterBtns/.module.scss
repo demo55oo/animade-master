@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  background-color: $dark__blue;
+  position: fixed;
+  bottom: 0;
+  left: 152px;
+  padding: 10px 24px;
+  width: calc(100% - 152px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 991px) {
+  .footer {
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 575px) {
+  .footer {
+    padding: 10px 18px;
+  }
+}

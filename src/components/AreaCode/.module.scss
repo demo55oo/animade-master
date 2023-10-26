@@ -1,0 +1,43 @@
+.select__box {
+  position: relative;
+  margin-right: 8px;
+  .button {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 4px;
+    border-right: 1px solid #ccc;
+    color: #323232;
+  }
+  .menu {
+    position: absolute;
+    top: calc(100% + 19px);
+    z-index: 1000;
+    background: #fff;
+    left: 0;
+    max-height: 357px;
+    overflow-x: hidden;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    overflow: scroll;
+    .item {
+      padding: 10px;
+      font-size: 14px;
+      min-width: 280px;
+      cursor: pointer;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #ccc;
+      }
+      &:hover {
+        background-color: #f2f2f2;
+      }
+      &.active {
+        background: #263238;
+        color: #fff;
+      }
+    }
+  }
+}

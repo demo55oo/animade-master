@@ -1,0 +1,105 @@
+@import "../../styles/variables.scss";
+
+.section__form {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  .form {
+    max-width: 600px;
+    flex: 1;
+  }
+  .check__box__list,
+  .check__box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    align-items: flex-start;
+    .check__box__list {
+      flex: 1;
+    }
+  }
+  button {
+    margin-left: auto;
+  }
+}
+.models {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  .model__p {
+    font-size: 18px;
+    line-height: 34px;
+    padding: 14px 20px;
+    background-color: #aaaaaa2d;
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+  }
+}
+@media (max-width: 767px) {
+  .section__form {
+    flex-direction: column;
+    .check__box__list,
+    .check__box {
+      row-gap: 20px;
+    }
+  }
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 29px;
+  border-radius: 15px;
+  background-color: $strong__red;
+  font-weight: $ft__w__bold;
+  text-transform: capitalize;
+  font-size: $ft__25;
+  min-width: 150px;
+  max-width: 100%;
+  transition: 0.2s linear;
+  border: 1px solid transparent;
+  &.purple {
+    background-color: $purple;
+  }
+  &.gray {
+    background-color: #6f6f6f;
+  }
+  &:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  &:hover {
+    background-color: $pure__white;
+    // background-color: transparent;
+    color: $strong__red;
+    border: 1px solid $strong__red;
+  }
+}
+
+.same-line {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1399px) {
+  .button {
+    padding: 10px 20px;
+    font-size: $ft__16;
+    border-radius: 10px;
+    min-width: 100px;
+  }
+}
+@media (max-width: 991px) {
+  .button {
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    min-width: 90px;
+  }
+}
+@media (max-width: 767px) {
+  .button {
+    min-width: auto;
+  }
+}

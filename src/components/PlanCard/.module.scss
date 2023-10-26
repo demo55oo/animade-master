@@ -1,0 +1,207 @@
+@import "../../styles/variables.scss";
+.plan {
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s linear;
+  background-image: url("../../assets/copyyy.png");
+  border-radius: 20px;
+
+  .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    &.pro {
+      border-color: transparent;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: $ft__w__bold;
+      width: 100%;
+      display: flex;
+      width: 171px;
+      padding: 11px 50px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 0px 0px 8px 8px;
+     background: var(--Helping, #213851);
+    }.iconContainer {
+      display: flex;
+      align-items:flex-start;
+      align-self: flex-start;
+
+    }.per{
+      color: var(--dark-v-80, #9C9A9E);
+text-align: center;
+font-family: Satoshi;
+font-size: 19px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
+    .ico{
+      align-self: flex-start;
+      background-image: url("../../assets/reacto.png");
+      width: 32px;
+      height: 32.8px;
+      padding-top: 4px;
+      padding-right: 4px;
+      margin-top: 6px;
+      /* margin-right: 10px; */
+      margin-left: 11px;
+    }.de{
+      color: #FFF;
+font-family: Satoshi;
+font-size: 19px;
+font-style: normal;
+font-weight: 700;
+padding-bottom: 10px;
+
+line-height: normal;
+    }
+    .toto{
+      font-size: 19px;
+      display: inline;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8px;
+      margin-left: 8px;
+      color: var(--white, #FFF);
+font-family: Satoshi;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
+    .subtitle {
+      font-size: $ft__18;
+      font-weight: $ft__w__regular;
+      color: var(--dark-v-60, #979597);
+      font-family: Satoshi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding: 0px 10px;
+      align-self: flex-start;
+    }
+    .image {
+      flex: 1;
+      img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .pro__designs {
+      font-weight: $ft__w__bold;
+      font-size: $ft__25;
+      margin: 20px auto 10px;
+      span {
+        font-weight: $ft__w__regular;
+      }
+    }
+    .designs {
+      font-weight: $ft__w__bold;
+      font-size: $ft__25;
+      margin: 20px auto 0;
+    }
+    .monthly {
+      font-weight: 300;
+      color: #e2e2e2;
+      font-size: 24px;
+      margin: 4px auto 0;
+    }
+    .extra {
+      font-weight: 300;
+      color: #e2e2e2;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 28px;
+      font-weight: $ft__w__bold;
+      width: 100%;
+    }
+  }
+  .choose__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 0px;
+    border-radius: 15px;
+    background-color: $strong__red;
+    font-weight: $ft__w__bold;
+    text-transform: capitalize;
+    font-size: $ft__20;
+    margin-top: 20px;
+    transition: 0.2s linear;
+  }
+  &:hover {
+    scale: 1.015555;
+    .card {
+      border-color: $pure__white;
+    }
+    .choose__btn {
+      background-color: $pure__white;
+      color: $strong__red;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .plan {
+    .card {
+      padding: 16px;
+      &.pro {
+        border-color: $pure__white;
+      }
+      .title {
+        font-size: $ft__22;
+        padding-bottom: 10px;
+        margin-bottom: 8px;
+      }
+      .subtitle {
+        font-size: $ft__16;
+        height: 56px;
+        padding: 0 4px;
+      }
+      .pro__designs {
+        font-size: $ft__22;
+        margin: 10px auto 6px;
+      }
+      .designs {
+        font-size: $ft__22;
+        margin: 10px auto 0;
+      }
+      .monthly {
+        font-size: 20px;
+      }
+      .extra {
+        font-size: 16;
+        margin-bottom: 8px;
+      }
+      .price {
+        font-size: 24px;
+      }
+    }
+    .choose__btn {
+      gap: 6px;
+      padding: 12px 0px;
+      border-radius: 12px;
+      font-size: $ft__18;
+      margin-top: 16px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .plan {
+    width: 375px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}

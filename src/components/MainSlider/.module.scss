@@ -1,0 +1,69 @@
+.hero__slider {
+  position: relative;
+  height: 100%;
+  display: flex;
+  // ====
+  width: 100%;
+  max-width: 1400px;
+  padding: 24px;
+  .slide__container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 991px) {
+  .hero__slider {
+    padding: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__slider {
+    padding: 18px 18px 40px;
+  }
+}
+.hdr{
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  display: flex;
+}
+.hdritem{
+  padding: 24px 24px 0;
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+.hdritembtn{
+  padding: 24px 24px 0;
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+
+.hdritembtn {
+  top: 12px;
+  /* Other styles you might have for .hdritem */
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid transparent; /* Set initial border to transparent */
+  border-image: linear-gradient(to right, orange, red); /* Gradient from orange to red as border */
+  border-image-slice: 1; /* Slice the border image to fit the border */
+  border-radius: 5px; /* Optional: Add border radius for rounded corners */
+}
+
+/* On hover, the border will change to a transparent gradient border */
+.hdritembtn:hover {
+  border: 2px solid transparent; /* Set the border to transparent */
+  border-radius: 5px; /* Optional: Add border radius for rounded corners */
+
+  border-image: linear-gradient(to right, orange, red); /* Gradient from orange to red as border */
+  border-image-slice: 1; /* Slice the border image to fit the border */
+}

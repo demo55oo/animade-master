@@ -1,0 +1,66 @@
+@import "../../styles/variables.scss";
+
+.page {
+  .form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 840px;
+    max-width: 100%;
+    .input__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      label {
+        font-size: $ft__25;
+        font-weight: $ft__w__bold;
+        white-space: pre;
+        width: 350px;
+        flex-shrink: 0;
+      }
+    }
+    button {
+      margin-left: auto;
+    }
+  }
+}
+@media (max-width: 1399px) {
+  .page {
+    .form {
+      .input__box {
+        label {
+          font-size: $ft__20;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .page {
+    .form {
+      width: 100%;
+      .input__box {
+        label {
+          width: 225px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .page {
+    .form {
+      width: 100%;
+      .input__box {
+        flex-direction: column;
+        gap: 6px;
+        label {
+          text-align: left;
+          width: 100%;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,229 @@
+@import "../../styles/variables.scss";
+
+.page {
+  .content {
+    .title {
+      font-family: $Poppins__font__family;
+      font-size: $ft__27;
+      font-weight: $ft__w__regular;
+      margin-bottom: 16px;
+    }
+    .information {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      .card {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 20px 24px;
+        border-radius: 20px;
+        border: 1px solid #ffff;
+        width: 360px;
+        max-width: 100%;
+        > div {
+          display: flex;
+          flex-direction: column;
+          row-gap: 6px;
+          font-size: $ft__20;
+        }
+      }
+      .list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        font-size: $ft__20;
+      }
+      > a {
+        min-width: 210px;
+        max-width: 100%;
+      }
+    }
+    .accounts__list {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #d9d9d9;
+      .account__box {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 60px;
+        border-bottom: 1px solid #d9d9d9;
+        font-family: $Poppins__font__family;
+        font-weight: $ft__w__regular;
+        font-size: $ft__20;
+        > span > a {
+          width: 230px;
+          max-width: 100%;
+          font-family: $Poppins__font__family;
+          font-weight: $ft__w__regular;
+          font-size: $ft__20;
+          height: 40px;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 40px;
+      font-size: $ft__20;
+      font-family: $Poppins__font__family;
+      padding-right: 60px;
+      a {
+        padding-bottom: 1px;
+        border-bottom: 1px solid #d9d9d9;
+      }
+    }
+  }
+}
+@media (max-width: 1399px) {
+  .page {
+    .content {
+      .title {
+        font-size: $ft__25;
+      }
+      .information {
+        .card {
+          gap: 18px;
+          padding: 16px 26px;
+          width: fit-content;
+          > div {
+            row-gap: 4px;
+            font-size: $ft__16;
+          }
+          svg {
+            height: 32px;
+            width: 32px;
+          }
+        }
+        .list {
+          font-size: $ft__16;
+        }
+      }
+      .accounts__list {
+        .account__box {
+          padding: 10px 40px;
+          font-size: $ft__18;
+          > span > a {
+            font-size: $ft__18;
+            height: 32px;
+          }
+        }
+      }
+      .footer {
+        font-size: $ft__18;
+        padding-right: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .page {
+    .content {
+      .title {
+        font-size: $ft__20;
+        margin-bottom: 14px;
+      }
+      .information {
+        gap: 10px;
+        flex-wrap: wrap;
+        .card {
+          gap: 18px;
+          padding: 14px 20px;
+          border-radius: 10px;
+        }
+        .list {
+          font-size: 14px;
+        }
+      }
+      .accounts__list {
+        .account__box {
+          padding: 8px 20px;
+          font-size: $ft__16;
+          > span > a {
+            font-size: $ft__16;
+            height: 28px;
+          }
+        }
+      }
+      .footer {
+        font-size: $ft__16;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .page {
+    .content {
+      .information {
+        flex-wrap: wrap;
+        gap: 20px;
+        a {
+          margin-left: auto;
+        }
+      }
+      .accounts__list {
+        .account__box {
+          padding: 8px 20px;
+          font-size: 14px;
+          > span > a {
+            width: 150px;
+            font-size: 14px;
+            height: 28px;
+          }
+        }
+      }
+      .footer {
+        font-size: 14px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .page {
+    .content {
+      .information {
+        flex-direction: column;
+        align-items: flex-start;
+        .card {
+          width: 100%;
+        }
+        a {
+          margin-left: 0;
+        }
+      }
+      .accounts__list {
+        .account__box {
+          > span > a {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .page {
+    .content {
+      .accounts__list {
+        .account__box {
+          padding: 8px 0;
+          > span > a {
+            width: fit-content;
+            padding: 4px 12px;
+          }
+        }
+      }
+      .footer {
+        padding-right: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+  }
+}

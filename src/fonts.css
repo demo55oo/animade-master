@@ -1,0 +1,5 @@
+@font-face {
+    font-family: "Satoshi";   /*Can be any text*/
+    src: local("Satoshi"),
+      url("./fonts/Satoshi-Black.ttf") format("truetype");
+  }

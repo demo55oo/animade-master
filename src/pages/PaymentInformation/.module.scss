@@ -1,0 +1,69 @@
+@import "../../styles/variables.scss";
+
+.page {
+  .content {
+    width: 800px;
+    max-width: 100%;
+    .box {
+      &:first-of-type {
+        margin-bottom: 50px;
+      }
+      .title {
+        font-family: $Poppins__font__family;
+        font-size: $ft__27;
+        font-weight: $ft__w__regular;
+        margin-bottom: 16px;
+      }
+      .inputs__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        .tow__inputs {
+          display: flex;
+          gap: 24px;
+        }
+      }
+    }
+    button {
+      margin-left: auto;
+      margin-top: 30px;
+    }
+  }
+}
+@media (max-width: 1399px) {
+  .page {
+    .content {
+      .box {
+        .title {
+          font-size: $ft__25;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .page {
+    .content {
+      width: 100%;
+      .box {
+        .title {
+          font-size: $ft__20;
+          margin-bottom: 14px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .page {
+    .content {
+      .box {
+        .inputs__container {
+          .tow__inputs {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "../../styles/variables.scss";
+
+.card {
+  padding: 35px 35px 35px 50px;
+  border: 5px solid #00a959;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: $ft__25;
+  &.Printful {
+    border-color: #355fe6;
+    .items__num,
+    .type {
+      &::after {
+        background-color: #355fe6;
+      }
+    }
+  }
+  .name {
+  }
+  .items__num,
+  .type {
+    padding-left: 34px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      background-color: #00a959;
+    }
+  }
+}
+@media (max-width: 1399px) {
+  .card {
+    padding: 24px 20px 24px 50px;
+    font-size: $ft__20;
+    border-width: 3px;
+  }
+}
+@media (max-width: 767px) {
+  .card {
+    padding: 18px 18px 18px 32px;
+    gap: 32px;
+    font-size: $ft__16;
+    .items__num,
+    .type {
+      padding-left: 20px;
+      position: relative;
+      &::after {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .card {
+    flex-wrap: wrap;
+    gap: 20px;
+    column-gap: 32px;
+    padding: 18px;
+    > span {
+      flex: 1;
+      white-space: pre;
+      &.name {
+        flex-basis: 100%;
+      }
+      &:not(.name) {
+        flex: none;
+      }
+    }
+  }
+}

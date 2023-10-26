@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+
+.title {
+  font-size: 50px;
+  font-weight: $ft__w__bold;
+  color: $pure__white;
+  font-family: $Poppins__font__family;
+  line-height: 52px;
+  margin-bottom: 20px;
+  width: fit-content;
+  span {
+    background: linear-gradient(90deg, $strong__red 35%, $orange__peel 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &.center {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 1399px) {
+  .title {
+    font-size: $ft__34;
+    line-height: 48px;
+  }
+}
+@media (max-width: 1199px) {
+  .title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: $ft__w__bold;
+    color: $pure__white;
+    font-family: $Poppins__font__family;
+    line-height: 52px;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+}

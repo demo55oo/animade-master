@@ -1,0 +1,25 @@
+.form-container {
+    height: 100%;
+    width: 500px;
+    padding-left: 1px;
+  }
+  
+  .form {
+    margin: auto;
+  }
+  
+  .btn-primary {
+    width: 120px;
+    border: 0;
+    padding: 7px;
+    border-radius: 15px;
+    color: white;
+    background: #00d4ff;
+    cursor: pointer;
+    border-radius: 100px;
+    border: 2px solid #c70025;
+    background: #616062;
+    padding-left: 61px;
+    padding-top: 10px;
+  }
+  

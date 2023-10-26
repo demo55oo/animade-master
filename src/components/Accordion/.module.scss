@@ -1,0 +1,32 @@
+.accordion {
+  padding: 24px 0;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  &.no__border__top {
+    border-top: none;
+    padding-top: 0;
+  }
+  .accordion__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1399px) {
+  .accordion {
+    padding: 18px 0;
+  }
+}
+@media (max-width: 1199px) {
+  .accordion {
+    padding: 14px 0;
+  }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 765px) {
+}
+@media (max-width: 575px) {
+}

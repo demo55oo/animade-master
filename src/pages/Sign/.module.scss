@@ -1,0 +1,229 @@
+@import "../../styles/variables.scss";
+
+.page {
+  min-height: calc(100vh - 104px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 20px;
+  .page__content {
+    text-align: center;
+    .main__title {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #d9d9d9;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+    }
+    .form {
+      max-width: 600px;
+      margin: 40px auto 0;
+      text-align: left;
+      padding-bottom: 40px;
+      .inputs__group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+        .first__inputs {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 18px;
+        }
+      }
+      .forget__pass {
+        text-align: right;
+        width: fit-content;
+        font-size: 16px;
+        margin: 10px 0 0 auto;
+        display: block;
+      }
+      .login__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 0;
+        border-radius: 10px;
+        background-color: $strong__red;
+        font-weight: $ft__w__bold;
+        text-transform: capitalize;
+        font-size: $ft__18;
+        width: 100%;
+        margin-top: 24px;
+        gap: 18px;
+        transition: 0.3s ease-in-out;
+        &:disabled {
+          cursor: not-allowed;
+          background-color: gray;
+        }
+        &.trouble__btn {
+          background-color: #4d595d;
+        }
+        .login__icon {
+          font-size: 24px;
+        }
+      }
+      .text__ {
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(68, 68, 68, 0.295);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        span {
+          font-weight: $ft__w__bold;
+          color: $orange__peel;
+          &.red {
+            color: $strong__red;
+          }
+        }
+      }
+      .code__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 56px;
+        position: relative;
+        margin: 50px auto;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: gray;
+          width: 14px;
+          height: 3px;
+          border-radius: 50px;
+        }
+        .code__inputs {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          input {
+            flex: 1;
+            height: 80px;
+            width: 50px;
+            border-radius: 5px;
+            background-color: $pure__white;
+            color: $dark__blue;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .text {
+      font-size: $ft__16;
+      text-align: center;
+    }
+  }
+  .error__message {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffcccc;
+    border-radius: 4px;
+    color: #c70025;
+    margin: 10px auto;
+    font-weight: 500;
+  }
+}
+.loader {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  border-right-color: #ffffff3b;
+  animation: spinner 1s linear infinite;
+}
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  white-space: pre;
+  gap: 60px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  button {
+    flex: 1;
+  }
+}
+@keyframes spinner {
+  to {
+    rotate: 360deg;
+  }
+}
+@media (max-width: 1199px) {
+  .input {
+    label {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .input {
+    gap: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .page {
+    .page__content {
+      .form {
+        .inputs__group {
+          .first__inputs {
+            flex-direction: column;
+            gap: 24px;
+          }
+        }
+        .code__container {
+          position: relative;
+          flex-wrap: wrap;
+          gap: 30px;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: gray;
+            width: 14px;
+            height: 3px;
+            border-radius: 50px;
+          }
+          .code__inputs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            input {
+              flex: 1;
+              height: 50px;
+              width: 35px;
+              border-radius: 5px;
+              background-color: $pure__white;
+              color: $dark__blue;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .input {
+    flex-wrap: wrap;
+  }
+  .btns {
+    gap: 20px;
+  }
+}

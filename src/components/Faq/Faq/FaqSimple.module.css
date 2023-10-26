@@ -1,0 +1,81 @@
+.wrapper {
+    padding-top: calc(var(--mantine-spacing-xl) * 2);
+    min-height: rem(820px);
+    background-image: url("../../../assets/mado.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: relative;
+    color: var(--mantine-color-black);
+    padding-bottom:90px;
+
+  }
+  
+  .title {
+    color: var(--mantine-color-white);
+    font-size: 52px;
+    font-family: Greycliff CF, var(--mantine-font-family);
+    margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+    
+  }
+  
+  .item {
+    border-bottom: 0;
+    border-radius: 8px;
+    border: 2px solid #62777D;
+    background: rgba(23, 42, 48, 0.20);
+    padding: 20px;
+    align-items: center;
+    gap: 400px;
+    backdrop-filter: blur(155px);
+    /* box-shadow: var(--mantine-shadow-lg); */
+    overflow: hidden;
+    justify-content: center;
+
+  }
+  
+  .control {
+    font-size: var(--mantine-font-size-lg);
+    padding: var(--mantine-spacing-lg) var(--mantine-spacing-xl);
+    color: var(--mantine-color-black);
+  
+    @mixin hover {
+      background-color: transparent;
+    }
+  }
+  
+  .content {
+    padding-left: var(--mantine-spacing-xl);
+    line-height: 1.6;
+    color: var(--mantine-color-black);
+  }
+  
+  .icon {
+    margin-left: var(--mantine-spacing-md);
+
+  }
+  
+  .gradient {
+    background-image: radial-gradient(
+      var(--mantine-color-blue-6) 0%,
+      var(--mantine-color-blue-5) 100%
+    );
+    display: inline-flex;
+   padding-left: 5px;
+  }
+  
+  .itemOpened {
+    & .icon {
+      transform: rotate(45deg);
+    }
+  }
+  
+  .button {
+    display: block;
+    margin-top: var(--mantine-spacing-md);
+  
+    @media (max-width: $mantine-breakpoint-sm) {
+      display: block;
+      width: 100%;
+    }
+  }
+  

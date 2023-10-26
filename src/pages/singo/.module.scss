@@ -1,0 +1,218 @@
+.loader__spinner {
+  width: 62px !important;
+  height: 62px !important;
+  display: block;
+  margin: 32px auto;
+  border-width: 6px !important;
+}
+@import "../../styles/variables.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 29px;
+  border-radius: 15px;
+  background-color: $strong__red;
+  font-weight: $ft__w__bold;
+  text-transform: capitalize;
+  font-size: $ft__25;
+  min-width: 150px;
+  max-width: 100%;
+  transition: 0.2s linear;
+  border: 1px solid transparent;
+  &.purple {
+    background-color: $purple;
+  }
+  &.gray {
+    background-color: #6f6f6f;
+  }
+  &:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  &:hover {
+    background-color: $pure__white;
+    // background-color: transparent;
+    color: $strong__red;
+    border: 1px solid $strong__red;
+  }
+}
+.oh{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.dropdown {
+  padding: 11px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 18px;
+  width: 535px;
+  /* background-color: #fff; */
+  color: white;
+  margin-left: 10px;
+  background: rgba(186, 186, 186, 0.10);
+
+  display: inline-flex;
+    height: 60px;
+    padding: 10px 10px 10px 20px;
+    align-items: center;
+    gap: 327px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #8A738A;
+    
+}
+.drop {
+  color: rgb(31, 27, 27); /* Set the text color of the options to white */
+  // background-color: black; /* Set the background color of the options */
+  /* ... other styles for the options ... */
+  background: rgba(186, 186, 186, 0.10);
+
+
+}.dody{
+  color: var(--dark-v-80, #9C9A9E);
+font-family: Satoshi;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 125% */
+background: transparent;
+padding-left: 10px;
+padding-bottom: 20px;
+width: 550px;
+
+}.whole{
+  width: 700px;
+height: 535px;
+flex-shrink: 0;
+border-radius: 20px;
+background: rgba(186, 186, 186, 0.10);
+backdrop-filter: blur(20px);
+padding: 50px;
+margin-left: 80px;
+
+}.wholey{
+  width: 945px;
+  height: 535px;
+flex-shrink: 0;
+border-radius: 20px;
+background: rgba(186, 186, 186, 0.10);
+backdrop-filter: blur(20px);
+// padding: 20px;
+margin-left: 80px;
+
+}
+.all{
+ display: flex;
+}.page{
+  background-image: url("../../assets/a7a.png");
+}
+.same-line {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1399px) {
+  .button {
+    padding: 10px 20px;
+    font-size: $ft__16;
+    border-radius: 10px;
+    min-width: 100px;
+  }
+}
+@media (max-width: 991px) {
+  .button {
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    min-width: 90px;
+  }
+}
+@media (max-width: 767px) {
+  .button {
+    min-width: auto;
+  }.oh{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .dropdown {
+    padding: 11px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 18px;
+    width: auto;
+    /* background-color: #fff; */
+    color: white;
+    margin-left: 10px;
+    background: rgba(186, 186, 186, 0.10);
+  
+    display: inline-flex;
+      height: 60px;
+      padding: 10px 10px 10px 20px;
+      align-items: center;
+      gap: 327px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      border: 1px solid #8A738A;
+      
+  }
+  .drop {
+    color: rgb(31, 27, 27); /* Set the text color of the options to white */
+    // background-color: black; /* Set the background color of the options */
+    /* ... other styles for the options ... */
+    background: rgba(186, 186, 186, 0.10);
+  
+  
+  }.dody{
+    color: var(--dark-v-80, #9C9A9E);
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+  background: transparent;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  width: auto;
+  
+  }.whole{
+    width: 400px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(186, 186, 186, 0.10);
+  backdrop-filter: blur(20px);
+  margin-left: 5px;
+  
+  }.wholey{
+
+  
+  width: auto;
+  height: 500px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(186, 186, 186, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-top: 10px;
+  }
+  .all{
+   display: flex;
+   flex-direction: column;
+  }.page{
+    background-image: url("../../assets/a7a.png");
+  }
+}

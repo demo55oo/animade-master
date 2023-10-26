@@ -1,0 +1,102 @@
+.header {
+  margin-bottom: 32px;
+  
+  .nav {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    /* Add styling for the currency dropdown container */
+    .header__links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 24px;
+      white-space: pre;
+      margin-left: auto;
+
+      /* Keep existing styling for spans */
+      span {
+        flex: 1;
+        text-align: right;
+        display: block;
+        padding: 10px 20px;
+
+        &:first-of-type {
+          border-right: 1px solid #fff;
+        }
+      }
+
+      /* Add styling for the currency dropdown */
+      .currencyDropdown {
+        padding: 10px;
+        font-size: 24px;
+        border: none;
+        background-color: black;
+        cursor: pointer;
+        appearance: none;
+        outline: none;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        margin-left: 20px;
+        transition: border-color 0.3s ease-in-out;
+
+        &:hover {
+          border-color: #ccc;
+        }
+      }
+    }
+  }
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 1399px) {
+  .header {
+    .nav {
+      .header__links {
+        font-size: 20px;
+
+        span {
+          padding: 8px 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    .nav {
+      .header__links {
+        font-size: 16px;
+
+        span {
+          padding: 8px 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    .nav {
+      flex-wrap: wrap;
+      gap: 10px;
+      flex-direction: column-reverse;
+
+      .header__links {
+        width: fit-content;
+        justify-content: flex-end;
+
+        span {
+          width: fit-content;
+          flex: none;
+        }
+      }
+    }
+  }
+}
