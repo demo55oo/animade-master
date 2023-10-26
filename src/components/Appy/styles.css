@@ -13,6 +13,7 @@
   
   .form-container {
     width: 10%;
+    
   }
   
   .steps-container {
@@ -64,10 +65,10 @@
   }
   
   .form-container {
-    width: 10%;
     height: 100%;
-    width: auto;
-    padding-left: 21px;
+    width: 100%;
+    padding-left: 20px;
+
 }
   
   .steps-container {

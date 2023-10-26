@@ -24,13 +24,14 @@ const placeholder =
       label: { color: 'var(--mantine-color-black)' },
       item: {
         border: '0px',
-        width: '100%', // Set width to 100% for responsiveness
+        width: '1000px', // Set width to 100% for responsiveness
         borderRadius: '8px',
         border: '2px solid #62777D',
         background: 'rgba(23, 42, 48, 0.20)',
         backdropFilter: 'blur(155px)',
         margin: '20px 0',
-        padding: '20px'
+        padding: '20px',
+        marginLeft:'550px'
       }
     };
   
