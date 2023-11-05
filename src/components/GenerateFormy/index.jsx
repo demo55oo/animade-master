@@ -17,6 +17,7 @@ const GenerateFormy = ({
   const [extraWords, setExtraWords] = useState("");
   const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
 
+  
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const requestData = {
@@ -28,19 +29,13 @@ const GenerateFormy = ({
     };
     // Add a new field "generatedSamples" to the requestData object
     requestData.generatedSamples = requestData.samples || 1; // Use "samples" value as the number of generated samples, default to 1 if not available
-    const tokenWithQuotes = localStorage.getItem("token");
-    const token = tokenWithQuotes.replace(/"/g, ""); // Remove quotes
-        console.log(token);
-
+    const token = "ewew"
     if(token){
     // Make the POST request to www.test.com/test with the requestData
-    setButtonClicked(true); // Disable the button after it has been clicked
-
     fetch(" https://backednlatestanimade-production.up.railway.app/api/decrease-designs/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Token ${token}`, // Include the authorization header
 
       },
       body: JSON.stringify(requestDatadec),
@@ -50,6 +45,8 @@ const GenerateFormy = ({
       });
     }
     onSubmit(requestData);
+    setButtonClicked(true); // Set the buttonClicked state to true to disable the button after clicking
+
   };
   return (
     <form
@@ -85,7 +82,7 @@ const GenerateFormy = ({
             />
           </>
         )}
-        <Button color="purple" type="submit" loading={loading} disabled={buttonClicked}>
+        <Button color="purple" type="submit" loading={loading} disabled={buttonClicked}  >
           <div className={styles.generat__btn}>
             {type === "ai" ? "Ask Ai" : "Generate"}
             <IoCaretForwardOutline />

@@ -9,8 +9,7 @@ export const textToImage1 = createAsyncThunk(
   'AIResults/textToImage',
   async (data, thunkAPI) => {
     const { rejectWithValue } = thunkAPI;
-    const tokenWithQuotes = localStorage.getItem("token");
-    const token = tokenWithQuotes.replace(/"/g, ""); // Remove quotes
+
 
     try {
       // Modify the request data structure as needed

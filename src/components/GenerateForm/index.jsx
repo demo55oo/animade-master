@@ -27,9 +27,8 @@ const GenerateForm = ({
     };
     // Add a new field "generatedSamples" to the requestData object
     requestData.generatedSamples = requestData.samples || 1; // Use "samples" value as the number of generated samples, default to 1 if not available
-    const tokenWithQuotes = localStorage.getItem("token");
-    const token = tokenWithQuotes.replace(/"/g, ""); // Remove quotes
-        console.log(token);
+    // const tokenWithQuotes = localStorage.getItem("token");
+    const token ="fddf"
 
     if(token){
     // Make the POST request to www.test.com/test with the requestData

@@ -19,7 +19,6 @@ const Singo = () => {
   );
   const location = useLocation();
   const navigate = useNavigate();
-  const [buttonClicked, setButtonClicked] = useState(false); // State to track button click
 
   const handleUploadProducts = () => {
     // Prepare your data here
@@ -34,9 +33,9 @@ const Singo = () => {
   
 
   
-  const { access_token, products, loadind } = useSelector(
-    (state) => state.printful
-  );
+  // const { access_token, products, loadind } = useSelector(
+  //   (state) => state.printful
+  // );
   const toggleCardSelection = (image) => {
     // Check if the card is already selected
     if (selectedDesigns.includes(image)) {
@@ -47,12 +46,11 @@ const Singo = () => {
   };
 
   const clientId = process.env.REACT_APP_PRINTFUL__CLIENT__ID;
-  const token = location.search.slice(
-    location.search.indexOf("=", 7) + 1,
-    location.search.indexOf("&", 10)
-  );
+  // const token = location.search.slice(
+  //   location.search.indexOf("=", 7) + 1,
+  //   location.search.indexOf("&", 10)
+  // );
   const handleGenerateImage = () => {
-    setButtonClicked(true); 
     dispatch(textToImage1(data));
   };
   useEffect(() => {
@@ -68,11 +66,11 @@ const Singo = () => {
       });
     }
   }, [textToImageResluts, dispatch]);
-  useEffect(() => {
-    if (token && !access_token) {
-      dispatch(printfulAuth(token));
-    }
-  }, [access_token, dispatch, token]);
+  // useEffect(() => {
+  //   if (token && !access_token) {
+  //     dispatch(printfulAuth(token));
+  //   }
+  // }, [access_token, dispatch, token]);
 
   const {  createdDesigns } = useSelector(
     (state) => state // Update the selector to include createdDesigns
@@ -114,7 +112,7 @@ const Singo = () => {
         <GenerateFormy
   type="single-input"
   placeholder="What do you want to see? Be specific."
-  onSubmit={() => dispatch(textToImage1(data))}
+  onSubmit={handleGenerateImage}
   setData={setData}
   data={data}
   loading={isLoading}
